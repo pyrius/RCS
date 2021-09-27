@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <script>
+        // Your JavaScript goes here!
+        console.log("Hello, World!")
+        let options = ['Rock', 'Scissors', 'Paper'];
+
+        let compChoice = options[Math.floor(Math.random() * options.length)];
+        console.log(compChoice);
+        let userChoice = prompt('Please enter your option:');
+        function playRound(userChoice, compChoice) {
+
+            switch (userChoice) {
+                case "Rock":
+                    console.log("Rock");
+                    if (compChoice == "Scissors") {
+                        console.log("Player wins");
+                    }
+                    else if (compChoice == "Rock") {
+                        console.log("Tie");
+                    }
+                    else if (compChoice == "Paper") {
+                        console.log("Computer wins");
+                    }
+                    break;
+                case "Scissors":
+                    console.log("Scissors");
+                    if (compChoice == "Scissors") {
+                        console.log("Tie");
+                    }
+                    else if (compChoice == "Rock") {
+                        console.log("Computer wins");
+                    }
+                    else if (compChoice == "Paper") {
+                        console.log("Player wins");
+                    }
+                    break;
+                case "Paper":
+                    console.log("Paper");
+                    if (compChoice == "Scissors") {
+                        console.log("Computer wins");
+                    }
+                    else if (compChoice == "Rock") {
+                        console.log("Player wins");
+                    }
+                    else if (compChoice == "Paper") {
+                        console.log("Tie");
+                    }
+                    break;
+                default:
+                    console.log("Unknown option");
+                    alert("Unknown option");
+            }
+
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
